@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>IPFS Drive</title>
+    <link rel="icon" type="image/x-icon" href="../images/icon-metamask.png">
+  
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+    <script src="https://github.com/WalletConnect/walletconnect-monorepo/releases/download/1.7.1/web3-provider.min.js"></script>
+  
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <main class="container">
+
+      <div class="bg-light p-5 rounded">
+        <h2 id="title">Profilo</h2>
+        <div class="text-center">
+          <span id="profileData"></span>
+        </div>
+  
+<!-- Aggiorna dati-->
+        <div>
+            <label class="form-label">Username</label>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="..." id="username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" onclick="uploadUsername()">Aggiorna username</button>
+            </div>
+
+            <label class="form-label">Immagine profilo</label>
+            <div class="input-group">
+                <input type="file" class="form-control" id="imageProfile" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                <button class="btn btn-outline-secondary" type="button" onclick="uploadImage()">Aggiorna immagine</button>
+            </div>
+
+        </div>
+        <div class="col-2 mx-auto w-100">
+          <label class="form-label" id ="result"></label>
+        </div>
+          <a href="../index.html">Torna alla home</a>
+          <p style="color: red;" id ="error"></p>
+          <p id = "session"></p>
+    </main>
+    
+    <script type="text/javascript" src="../scripts/init.js"></script>
+    <script type="text/javascript" src="../scripts/profile.js"></script>
+    <script type="text/javascript" src="../scripts/filter.js"></script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>    
+  </body>
+</html>
