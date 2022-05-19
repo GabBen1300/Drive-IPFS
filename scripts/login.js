@@ -3,20 +3,20 @@ logIn = async () => {
     let user = Moralis.User.current();
     if (!user) {
         // controllo se l'utente è connesso dal cellulare o pc
-        if(typeof screen.orientation === 'undefined'){
+        if (typeof screen.orientation === 'undefined') {
             // cellulare
-            const user = await Moralis.authenticate({ 
-                provider: "walletconnect", 
+            const user = await Moralis.authenticate({
+                provider: "walletconnect",
                 signingMessage: "Login on gabrielbenolli.com (mobile login)",
                 mobileLinks: [
-                  "rainbow",
-                  "metamask",
-                  "argent",
-                  "trust",
-                  "imtoken",
-                  "pillar",
-                ] 
-            }).then(function (user){
+                    "rainbow",
+                    "metamask",
+                    "argent",
+                    "trust",
+                    "imtoken",
+                    "pillar",
+                ]
+            }).then(function (user) {
                 checkUser();
                 //location.reload();
             }).catch(function (error) {
@@ -27,7 +27,7 @@ logIn = async () => {
             // pc
             user = await Moralis.authenticate({
                 signingMessage: "Login on gabrielbenolli.com (desktop login)",
-            }).then(function (user){
+            }).then(function (user) {
                 checkUser();
                 //location.reload();
             }).catch(function (error) {
@@ -42,20 +42,20 @@ logInWC = async () => {
     let user = Moralis.User.current();
     if (!user) {
         // controllo se l'utente è connesso dal cellulare o pc
-        if(typeof screen.orientation === 'undefined'){
+        if (typeof screen.orientation === 'undefined') {
             // cellulare
-            const user = await Moralis.authenticate({ 
-                provider: "walletconnect", 
+            const user = await Moralis.authenticate({
+                provider: "walletconnect",
                 signingMessage: "Login on gabrielbenolli.com (mobile login)",
                 mobileLinks: [
-                  "rainbow",
-                  "metamask",
-                  "argent",
-                  "trust",
-                  "imtoken",
-                  "pillar",
-                ] 
-            }).then(function (user){
+                    "rainbow",
+                    "metamask",
+                    "argent",
+                    "trust",
+                    "imtoken",
+                    "pillar",
+                ]
+            }).then(function (user) {
                 checkUser();
                 //location.reload();
             }).catch(function (error) {
@@ -64,18 +64,18 @@ logInWC = async () => {
             });
         } else {
             // cellulare
-            const user = await Moralis.authenticate({ 
-                provider: "walletconnect", 
+            const user = await Moralis.authenticate({
+                provider: "walletconnect",
                 signingMessage: "Login on gabrielbenolli.com (mobile login)",
                 mobileLinks: [
-                  "rainbow",
-                  "metamask",
-                  "argent",
-                  "trust",
-                  "imtoken",
-                  "pillar",
-                ] 
-            }).then(function (user){
+                    "rainbow",
+                    "metamask",
+                    "argent",
+                    "trust",
+                    "imtoken",
+                    "pillar",
+                ]
+            }).then(function (user) {
                 checkUser();
                 //location.reload();
             }).catch(function (error) {
@@ -124,14 +124,13 @@ async function userSignIn() {
             //ACCESSO CONSENTITO SOLO SE VERIFICATO
             const Monster = Moralis.Object.extend("_User");
             const query = new Moralis.Query(Monster);
-        
+
             query.equalTo("ethAddress", user.get("ethAddress"));
-        
+
             const result = await query.first();
             console.log(result);
             console.log(result.get("emailVerified"));
-            if(!result.get("emailVerified"))
-            {
+            if (!result.get("emailVerified")) {
                 alert("Devi verificare il tuo account per poter accedere, controlla la tua casella postale, la mail di verifica potrebbe essere nella SPAM");
                 logOut();
             }
@@ -174,6 +173,17 @@ async function sendEmailVerification(email) {
             alert("Error: " + error.code + " " + error.message);
         });
 };
+
+
+//CLOUD FUNCTION CHE NON CREDO SERVA
+
+// Moralis.Cloud.define("sendEmailToUser", function (request) {
+//     Moralis.Cloud.sendEmail({
+//         to: request.user.get("email"),
+//         subject: "Fundamentals",
+//         html: "TestMail"
+//     });
+// });
 
 
 document.getElementById("login_button").onclick = logIn;
