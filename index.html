@@ -46,7 +46,7 @@
         <div class="container">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-              <div class="card shadow-2-strong" style="border-radius: 1rem; box-shadow: 10px 10px 5px lightgray;">
+              <div class="card shadow-2-strong" style="border-radius: 1rem; box-shadow: 10px 15px 5px lightgray;">
                 <div class="card-body p-5 text-center">
 
                   <h3 class="mb-5">IPFS Drive</h3>
@@ -61,11 +61,11 @@
                     <label class="form-label" for="typePasswordX-2">Password</label>
                   </div>
 
-                  <button style="width:90px; margin-bottom:2px;" class="btn btn-primary btn-block"
+                  <button style="width:90px; margin:2px;" class="btn btn-primary btn-block"
                     id="login_button2">Login</button>
-                  <button style="width:90px; margin-top:2px; margin-bottom:2px;" id="register_button"
-                    class="btn btn-primary">Register</button>
-                  <button style="width:90px; margin-top:2px;" id="reset_button" class="btn btn-danger">Reset</button>
+                  <button style="width:90px; margin:2px;" id="register_button"
+                    class="btn btn-secondary">Register</button>
+                  <button style="width:90px; margin:2px;" id="reset_button" class="btn btn-danger">Reset</button>
 
                   <hr class="my-4">
                   <center>
@@ -87,6 +87,7 @@
     </div>
 
 
+
     <!-- Contentenuto utente loggato -->
     <div id="content">
 
@@ -104,7 +105,7 @@
             <option value="Zip">.Zip</option>
             <option value="Altro">Altro</option>
           </select>
-          <button class="btn btn-outline-secondary" type="button" onclick="filter()">Filtra</button>
+          <button class="btn btn-outline-secondary" type="button" onclick="filterAll()">Filtra</button>
           <button class="btn btn-outline-secondary" type="button" onclick="location.reload()">Mostra tutto</button>
         </div>
         <p id="getRecords">
