@@ -162,6 +162,21 @@ function resetPassword() {
     }
 };
 
+// verify with email
+async function verify() {
+
+    // Get the user credential
+    const _email = document.getElementById('email').value;
+    const _password = document.getElementById('password').value;
+    // Sign them up with one line of code
+    try {
+        sendEmailVerification(_email);
+    } catch (error) {
+        alert("Error: " + error.code + " " + error.message);
+    }
+    checkUser();
+}
+
 async function sendEmailVerification(email) {
     await Moralis.User.requestEmailVerification(email)
         .then(() => {
@@ -191,3 +206,4 @@ document.getElementById("login_wc").onclick = logInWC;
 document.getElementById("login_button2").onclick = userSignIn;
 document.getElementById("register_button").onclick = register;
 document.getElementById("reset_button").onclick = resetPassword;
+document.getElementById("verification-button").onclick = verify;

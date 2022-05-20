@@ -21,11 +21,11 @@ async function uploadImg() {
         monster.set("image_hash", file.hash());
         monster.save().then(
             (monster) => {
-                alert("Foto profilo aggiornata!! 🥳");
+                alert("Foto profilo aggiornata!");
                 location.reload();
             },
             (error) => {
-                alert("Errore nel caricamento del file. Riprovare. 😢");
+                alert("Errore nel caricamento del file. Riprovare.");
             });
         console.log(monster, file.ipfs());
     }
@@ -50,11 +50,11 @@ async function uploadUser() {
     monster.set("username", username);
     monster.save().then(
         (monster) => {
-            alert("Username aggiornato!! 🥳");
+            alert("Username aggiornato!");
             location.reload();
         },
         (error) => {
-            alert("Errore nella modifica dell'username. Riprovare. 😢");
+            alert("Errore nella modifica dell'username. Riprovare.");
         });
     
 }
