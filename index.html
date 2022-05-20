@@ -27,11 +27,11 @@
         </div>
         <div class="col-sm-4"></div>
         <div class="col-sm-2">
-          <button style="margin-top: 20px; width:100%" type="button" class="btn btn-danger "
-            id="logout_button">Logout</button>
-          <br>
-          <button id="profile_button" onclick="location.href='pages/profile.html'" type="button" class="btn btn-info"
-            style="margin-bottom: 20px; width:100%">Profilo</button>
+          <div class="row">
+            <td><button type="button"class="btn btn-danger out-btn" id="logout_button">Logout</button></td>
+            <td><button id="profile_button" onclick="location.href='pages/profile.html'" type="button" class="btn btn-info prof-btn" >Profilo</button>
+            </td>
+          </div>
         </div>
         <div class="col-sm-2">
           <div class="text-center" id="profile">
@@ -63,11 +63,12 @@
 
                   <button style="width:45%; margin:2px;" class="btn btn-primary btn-block"
                     id="login_button2">Login</button>
-                  <button style="width:45%; margin:2px;" id="register_button"
-                    class="btn btn-danger">Register</button>
+                  <button style="width:45%; margin:2px;" id="register_button" class="btn btn-danger">Register</button>
                   <br><br>
-                  <a style="color: blue; text-decoration: underline; cursor: pointer;" id="verification-button"> Invia email di verifica</a> <span> | </span>
-                  <a style="color: blue; text-decoration: underline; cursor: pointer;" id="reset_button"> Reset password</a>
+                  <a style="color: blue; text-decoration: underline; cursor: pointer;" id="verification-button">Verifica
+                    account</a> <span> | </span>
+                  <a style="color: blue; text-decoration: underline; cursor: pointer;" id="reset_button"> Reset
+                    password</a>
 
 
                   <!-- <button style="width:90px; margin:2px;" id="verification-button" class="btn btn-info">Verifica</button>
@@ -103,7 +104,7 @@
         <h4>I TUOI FILE DISTRIBUITI</h4>
         <div class="input-group">
           <select class="form-select w-50" id="filterSelect" aria-label="Example select with button addon">
-            <option value="reset" selected>Filtra per tipo</option>
+            <option value="reset" selected disabled>Filtra per tipo</option>
             <option value="Immagine">Immagine</option>
             <option value="Video">Video</option>
             <option value="Audio">Audio</option>
@@ -156,11 +157,10 @@
           </svg>
           Upload
         </button>
-        <br><br>
         <div class="col-2 mx-auto w-100">
-          <p id = "speed"></p>
-          <p id = "average"></p>
-          <div id ="result"></div>
+          <p id="speed"></p>
+          <p id="average"></p>
+          <div id="result"></div>
         </div>
       </div>
       <!-- ---------- -->
@@ -169,6 +169,8 @@
     <p style="color: red;" id="error"></p>
     <p id="session"></p>
   </main>
+
+  <p id="popup" style="color: white;"> </p>
 
   <script type="text/javascript" src="./scripts/init.js"></script>
   <script type="text/javascript" src="./scripts/checkUser.js"></script>

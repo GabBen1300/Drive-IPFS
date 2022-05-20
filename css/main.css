@@ -13,14 +13,35 @@ a {
 /*Desktop Query*/
 @media only screen and (min-width: 768px) {
   .col-2.mx-auto {width: 50%;}
+  .out-btn {margin-bottom: 5px; margin-top: 20px; width:100%}
+  .prof-btn {margin-bottom: 20px; margin-top: 5px; width:100%}
 }
 
 /*Mobile Query*/
 @media only screen and (max-width:480px) {
   .col-2.mx-auto {width: 90%;}  
+  .out-btn {width:45%; margin-right: 5%; margin-bottom: 10px;  }
+  .prof-btn {width:45%;  margin-left: 5%; margin-bottom: 10px;}
 }
-
 /*Tablet Query*/
 @media only screen and (min-width: 481px) and (max-width:768px) {
   .col-2.mx-auto {width: 50%;}
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap:  wrap;
+  justify-content: center;
+  align-items: center;
+  align-content:center ;
+  align-items: stretch;
+}
+
+.flexitems {
+  order: 1;
+  flex-grow: 1;
+  flex-shrink: 2;
+  align-self: auto ;
+  flex-basis: auto;
 }

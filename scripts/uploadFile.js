@@ -107,7 +107,7 @@ uploadMetadata = async (imageHash) => {
     
     addLinkToDB(nameImg, description, fileType, imageHash, file.ipfs(), file.hash());
 
-    var res = "File caricato! Aggiornare la pagina";
+    var res = "File caricato correttamente!";
     // var res = "<br>IPFS: <a href = '" + file.ipfs() + "' target = '_blank'>link</a>";
     // res += "<br>HASH: " + file.hash();
 
