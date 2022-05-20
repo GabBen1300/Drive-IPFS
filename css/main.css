@@ -6,15 +6,21 @@
     user-select: none;
   }
 
-@media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-    }
-    #logout_button{
-      width: 100%;
-    }
-}
-
 a {
     text-decoration: none;
   }
+
+/*Desktop Query*/
+@media only screen and (min-width: 768px) {
+  .col-2.mx-auto {width: 50%;}
+}
+
+/*Mobile Query*/
+@media only screen and (max-width:480px) {
+  .col-2.mx-auto {width: 90%;}  
+}
+
+/*Tablet Query*/
+@media only screen and (min-width: 481px) and (max-width:768px) {
+  .col-2.mx-auto {width: 50%;}
+}

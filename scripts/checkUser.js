@@ -136,7 +136,11 @@ async function hasUploadedFiles(user) {
                 var linkImg = getLinkIpfs(object.get("ImgHash"));
 
 
-                table += "<tr><th scope='row'><a style = 'color: black;' href = '" + getLinkIpfs(object.get("hash_ipfs")) + "' target = '_blank'>" + (i + 1) + "</a></th>";
+                table += "<tr class = '${bg-color}'><th scope='row'><a style = 'color: black;' href = '" + getLinkIpfs(object.get("hash_ipfs")) + "' target = '_blank'>" + (i + 1) + "</a></th>";
+
+                if(i % 2 == 0) table = table.replace("${bg-color}", "bg-light");
+                else table = table.replace("${bg-color}", "bg-white");
+
                 table += "<td>" + object.get("ImgName") + "</td>";
                 table += "<td>" + object.get("ImgDescription") + "</td>";
                 table += "<td>" + object.get("updatedAt").toString().substring(0, 25) + "</td>";
