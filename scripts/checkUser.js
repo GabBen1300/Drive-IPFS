@@ -159,7 +159,7 @@ async function hasUploadedFiles(user) {
 
                 table += "</tr>";
             }
-            table += "</tbody></table><br>";
+            table += "</tbody></table>";
             changeValue("getRecords", table);
         }
         else document.getElementById("IPFS_content").style.display = "none";

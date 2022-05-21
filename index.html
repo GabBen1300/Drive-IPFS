@@ -18,160 +18,169 @@
 </head>
 
 <body>
-  <main class="container">
-    <div class="bg-light p-3 rounded" id="top-bar">
-      <div class="row">
-        <div class="col-sm-4">
-          <h1 id="title" class="display-4" style="margin-bottom: 10px;">IPFS Drive</h1>
-          <p id="logged-in-user"></p>
-        </div>
-        <div class="col-sm-4"></div>
-        <div class="col-sm-2">
-          <div class="row">
-            <td><button type="button"class="btn btn-danger out-btn" id="logout_button">Logout</button></td>
-            <td><button id="profile_button" onclick="location.href='pages/profile.html'" type="button" class="btn btn-info prof-btn" >Profilo</button>
-            </td>
+  <div id="particles-js">
+    <main class="container">
+      <div class="bg-light p-3 rounded" id="top-bar">
+        <div class="row">
+          <div class="col-sm-4">
+            <h1 id="title" class="display-4" style="margin-bottom: 10px;">IPFS Drive</h1>
+            <p id="logged-in-user"></p>
           </div>
-        </div>
-        <div class="col-sm-2">
-          <div class="text-center" id="profile">
-            <span id="profileData"></span>
+          <div class="col-sm-4"></div>
+          <div class="col-sm-2">
+            <div class="row">
+              <td><button type="button" class="btn btn-danger out-btn" id="logout_button">Logout</button></td>
+              <td><button id="profile_button" onclick="location.href='pages/profile.html'" type="button"
+                  class="btn btn-info prof-btn">Profilo</button>
+              </td>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="text-center" id="profile">
+              <span id="profileData"></span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div id="login_buttons" style="padding-top: 5%;">
-      <section>
-        <div class="container">
-          <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-              <div class="card shadow-2-strong" style="border-radius: 1rem; box-shadow: 10px 15px 5px lightgray;">
-                <div class="card-body p-5 text-center">
+      <div id="login_buttons" style="padding-top: 5%;">
+        <section>
+          <div class="container">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+              <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card shadow-2-strong" style="border-radius: 1rem; box-shadow: 10px 15px 5px lightgray;">
+                  <div class="card-body p-5 text-center">
 
-                  <h3 class="mb-5">IPFS Drive</h3>
+                    <h3 class="mb-5">IPFS Drive</h3>
 
-                  <div class="form-outline mb-4">
-                    <input type="email" name="email" id="email" class="form-control form-control-lg" />
-                    <label class="form-label" for="typeEmailX-2">Email</label>
-                  </div>
+                    <div class="form-outline mb-4">
+                      <input type="email" name="email" id="email" class="form-control form-control-lg" />
+                      <label class="form-label" for="typeEmailX-2">Email</label>
+                    </div>
 
-                  <div class="form-outline mb-4">
-                    <input type="password" name="password" id="password" class="form-control form-control-lg" />
-                    <label class="form-label" for="typePasswordX-2">Password</label>
-                  </div>
+                    <div class="form-outline mb-4">
+                      <input type="password" name="password" id="password" class="form-control form-control-lg" />
+                      <label class="form-label" for="typePasswordX-2">Password</label>
+                    </div>
 
-                  <button style="width:45%; margin:2px;" class="btn btn-primary btn-block"
-                    id="login_button2">Login</button>
-                  <button style="width:45%; margin:2px;" id="register_button" class="btn btn-danger">Register</button>
-                  <br><br>
-                  <a style="color: blue; text-decoration: underline; cursor: pointer;" id="verification-button">Verifica
-                    account</a> <span> | </span>
-                  <a style="color: blue; text-decoration: underline; cursor: pointer;" id="reset_button"> Reset
-                    password</a>
+                    <button style="width:45%; margin:2px;" class="btn btn-primary btn-block"
+                      id="login_button2">Login</button>
+                    <button style="width:45%; margin:2px;" id="register_button" class="btn btn-danger">Register</button>
+                    <br><br>
+                    <a style="color: blue; text-decoration: underline; cursor: pointer;"
+                      id="verification-button">Verifica
+                      account</a> <span> | </span>
+                    <a style="color: blue; text-decoration: underline; cursor: pointer;" id="reset_button"> Reset
+                      password</a>
 
 
-                  <!-- <button style="width:90px; margin:2px;" id="verification-button" class="btn btn-info">Verifica</button>
+                    <!-- <button style="width:90px; margin:2px;" id="verification-button" class="btn btn-info">Verifica</button>
                   <button style="width:90px; margin:2px;" id="reset_button" class="btn btn-secondary">Reset</button> -->
 
-                  <hr class="my-4">
-                  <center>
-                    <button class="btn  btn-block btn-success" style="width: 90%;" id="login_button" type="submit"><img
-                        style="width: 25px; height: 25px" src="images/icon-metamask.png"> Sign
-                      in with MetaMask</button>
+                    <hr class="my-4">
+                    <center>
+                      <button class="btn  btn-block btn-success" style="width: 90%;" id="login_button"
+                        type="submit"><img style="width: 25px; height: 25px" src="images/icon-metamask.png"> Sign
+                        in with MetaMask</button>
+                      <br>
+                      <button class="btn  btn-block btn-primary" style="width: 90%;" id="login_wc" type="submit"><img
+                          style="width: 25px; height: 25px" src="images/icon-walletconnect.png"> Sign
+                        in with WalletConnect</button>
+                    </center>
                     <br>
-                    <button class="btn  btn-block btn-primary" style="width: 90%;" id="login_wc" type="submit"><img
-                        style="width: 25px; height: 25px" src="images/icon-walletconnect.png"> Sign
-                      in with WalletConnect</button>
-                  </center>
-                  <br>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </section>
+      </div>
+
+
+
+      <!-- Contentenuto utente loggato -->
+      <div id="content">
+
+        <!-- YOUR DATA from IPFS -->
+        <div id="IPFS_content">
+          <hr>
+          <h4>I TUOI FILE DISTRIBUITI</h4>
+          <div class="input-group">
+            <select class="form-select w-50" id="filterSelect" aria-label="Example select with button addon">
+              <option value="reset" selected disabled>Filtra per tipo</option>
+              <option value="Immagine">Immagine</option>
+              <option value="Video">Video</option>
+              <option value="Audio">Audio</option>
+              <option value="Testo">Testo</option>
+              <option value="Zip">.Zip</option>
+              <option value="Altro">Altro</option>
+            </select>
+            <button class="btn btn-outline-secondary" type="button" onclick="filterAll()">Filtra</button>
+            <button class="btn btn-outline-secondary" type="button" onclick="location.reload()">Mostra tutto</button>
+          </div>
+          <p id="getRecords">
+          </p>
         </div>
-      </section>
-    </div>
 
+        <!-- ------------------- -->
 
-
-    <!-- Contentenuto utente loggato -->
-    <div id="content">
-
-      <!-- YOUR DATA from IPFS -->
-      <div id="IPFS_content">
+        <!-- INPUT IPFS -->
         <hr>
-        <h4>I TUOI FILE DISTRIBUITI</h4>
-        <div class="input-group">
-          <select class="form-select w-50" id="filterSelect" aria-label="Example select with button addon">
-            <option value="reset" selected disabled>Filtra per tipo</option>
-            <option value="Immagine">Immagine</option>
-            <option value="Video">Video</option>
-            <option value="Audio">Audio</option>
-            <option value="Testo">Testo</option>
-            <option value="Zip">.Zip</option>
-            <option value="Altro">Altro</option>
-          </select>
-          <button class="btn btn-outline-secondary" type="button" onclick="filterAll()">Filtra</button>
-          <button class="btn btn-outline-secondary" type="button" onclick="location.reload()">Mostra tutto</button>
+        <h4>UPLOAD CON IPFS</h4>
+        <div class="col-2 mx-auto">
+
+          <div class="mb-3" for="validationDefault01">
+            <input type="text" class="form-control" name="nameImg" id="nameImg" placeholder="Nome">
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" name="description" id="description" rows="3"
+              placeholder="Descrizione"></textarea>
+          </div>
+          <div class="mb-3" for="validationDefault02">
+            <select class="form-select" aria-label="Tipo" id="fileType">
+              <option selected disabled value="Tipo">Tipo</option>
+              <option value="Immagine">Immagine</option>
+              <option value="Video">Video</option>
+              <option value="Testo">Audio</option>
+              <option value="Testo">Testo</option>
+              <option value="Zip">.Zip</option>
+              <option value="Altro">Altro</option>
+            </select>
+          </div>
+          <div class="mb-3" for="validationDefault03">
+            <input class="form-control" type="file" id="image" name="image" required>
+          </div>
+          <button type="submit" class="btn btn-warning btn-lg" id="upload">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-upload"
+              viewBox="0 0 20 19">
+              <path
+                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+              <path
+                d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z" />
+            </svg>
+            Upload
+          </button>
+          <div class="col-2 mx-auto w-100">
+            <p id="speed"></p>
+            <p id="average"></p>
+            <div id="result"></div>
+          </div>
         </div>
-        <p id="getRecords">
-        </p>
+        <!-- ---------- -->
+
       </div>
+      <p style="color: red;" id="error"></p>
+      <p id="session"></p>
+    </main>
 
-      <!-- ------------------- -->
+    <p id="popup" style="color: white;"> </p>
 
-      <!-- INPUT IPFS -->
-      <hr>
-      <h4>UPLOAD CON IPFS</h4>
-      <div class="col-2 mx-auto">
+    <!-- particles.js container -->
+  </div>
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
+  <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
 
-        <div class="mb-3" for="validationDefault01">
-          <input type="text" class="form-control" name="nameImg" id="nameImg" placeholder="Nome">
-        </div>
-        <div class="mb-3">
-          <textarea class="form-control" name="description" id="description" rows="3"
-            placeholder="Descrizione"></textarea>
-        </div>
-        <div class="mb-3" for="validationDefault02">
-          <select class="form-select" aria-label="Tipo" id="fileType">
-            <option selected disabled value="Tipo">Tipo</option>
-            <option value="Immagine">Immagine</option>
-            <option value="Video">Video</option>
-            <option value="Testo">Audio</option>
-            <option value="Testo">Testo</option>
-            <option value="Zip">.Zip</option>
-            <option value="Altro">Altro</option>
-          </select>
-        </div>
-        <div class="mb-3" for="validationDefault03">
-          <input class="form-control" type="file" id="image" name="image" required>
-        </div>
-        <button type="submit" class="btn btn-warning btn-lg" id="upload">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-upload"
-            viewBox="0 0 20 19">
-            <path
-              d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
-            <path
-              d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z" />
-          </svg>
-          Upload
-        </button>
-        <div class="col-2 mx-auto w-100">
-          <p id="speed"></p>
-          <p id="average"></p>
-          <div id="result"></div>
-        </div>
-      </div>
-      <!-- ---------- -->
-
-    </div>
-    <p style="color: red;" id="error"></p>
-    <p id="session"></p>
-  </main>
-
-  <p id="popup" style="color: white;"> </p>
-
+  <script type="text/javascript" src="./scripts/particles.js"></script>
   <script type="text/javascript" src="./scripts/init.js"></script>
   <script type="text/javascript" src="./scripts/checkUser.js"></script>
   <script type="text/javascript" src="./scripts/login.js"></script>

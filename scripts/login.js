@@ -88,6 +88,7 @@ logInWC = async () => {
 
 // Register with email/password + check user
 async function register() {
+    console.log("register chiamata");
 
     // Get the user credential
     const _email = document.getElementById('email').value;
@@ -104,6 +105,7 @@ async function register() {
     try {
         await user.signUp();
         sendEmailVerification(_email);
+        console.log("sendverification chiamata chiamata");
     } catch (error) {
         alert("Error: " + error.code + " " + error.message);
     }
@@ -178,6 +180,7 @@ async function verify() {
 }
 
 async function sendEmailVerification(email) {
+    console.log("send email chiamata");
     await Moralis.User.requestEmailVerification(email)
         .then(() => {
             //user will get an email with a link. If the user clicks on the link his user get authenticated.
