@@ -13,7 +13,7 @@ const serverUrl = "YOUR SERVER URL";
 const appId = "YOUR APPLICATION ID";
 Moralis.start({ serverUrl, appId });
 ```
-Then put file on a web server or hosting 
+Then put the file on a web server or hosting, plus you also need to install the [MetaMask extension](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn) to be able to log in with it
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
